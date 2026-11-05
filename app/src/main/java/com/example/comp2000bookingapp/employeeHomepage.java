@@ -24,9 +24,23 @@ public class employeeHomepage extends AppCompatActivity {
         });
         Button requestRoomButton = (Button) findViewById(R.id.requestRoomButton);
         requestRoomButton.setOnClickListener(x -> onrequestRoomButtonButtonClick());
+
+        Button calendarButtonButton = (Button) findViewById(R.id.calendarButton);
+        calendarButtonButton.setOnClickListener(x -> oncalendarButtonButtonClick());
+
+        Button bookingsButtonButton = (Button) findViewById(R.id.bookingsButton);
+        bookingsButtonButton.setOnClickListener(x -> onbookingsButtonButtonClick());
     }
     private void onrequestRoomButtonButtonClick(){
         Intent intent = new Intent(this, RoomRequest.class);
         startActivity(intent);
+    }
+    private void oncalendarButtonButtonClick(){
+        Intent intent2 = new Intent(this, EmployeeCalendar.class);
+        startActivity(intent2);
+    }
+    private void onbookingsButtonButtonClick(){
+        Intent intent3 = new Intent(this, MyBookings.class);
+        startActivity(intent3);
     }
 }
