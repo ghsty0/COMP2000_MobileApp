@@ -39,10 +39,114 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         android:gravity="center"
         >
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewAvailability"
+            android:text="View Availability"
+            android:backgroundTint="@color/blue"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Room: Meeting Room 1"
+            android:id="@+id/selectedRoom"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="19sp"
+            />
+
+        <ScrollView
+            android:layout_width="256dp"
+            android:layout_height="128dp"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+            <Button
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/MR1"
+                android:text="Meeting Room 1"
+                android:backgroundTint="@color/blue"
+                android:textSize="20sp"
+                />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MR2"
+                    android:text="Meeting Room 2"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MR3"
+                    android:text="Meeting Room 3"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MR4"
+                    android:text="Meeting Room 4"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MR5"
+                    android:text="Meeting Room 5"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SR1"
+                    android:text="Seminar Room 1"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SR2"
+                    android:text="Seminar Room 2"
+                    android:backgroundTint="@color/blue"
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
 
 
 

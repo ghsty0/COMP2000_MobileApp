@@ -40,8 +40,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:orientation="vertical"
+        android:layout_marginEnd="1dp"
         >
 
         <TextView
@@ -53,6 +54,13 @@
             android:text="Today"
             android:textColor="@color/blue"
             android:textSize="30sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/blue"
+            />
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,6 +71,11 @@
             android:text="Upcoming"
             android:textColor="@color/blue"
             android:textSize="30sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/blue"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,6 +86,11 @@
             android:text="Past"
             android:textColor="@color/blue"
             android:textSize="30sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/blue"
+            />
 
     </LinearLayout>
 
