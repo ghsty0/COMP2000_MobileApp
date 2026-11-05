@@ -1,7 +1,13 @@
 package com.example.comp2000bookingapp;
 
+import static android.view.View.VISIBLE;
+import static android.view.View.INVISIBLE;
+
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +28,10 @@ public class RoomRequest extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        DatePicker calendar = findViewById(R.id.datePicker);
+        Button openCalendar = (Button) findViewById(R.id.openCalendar);
+        openCalendar.setOnClickListener(x -> onopenCalendarButtonClick(openCalendar, calendar));
+
         Button[] rooms = {
                         findViewById(R.id.MR1),
                         findViewById(R.id.MR2),
@@ -32,14 +42,37 @@ public class RoomRequest extends AppCompatActivity {
                         findViewById(R.id.SR2)
                 };
         TextView selectedRoom = (TextView)findViewById(R.id.selectedRoom);
+        TextView selectedDate = (TextView)findViewById(R.id.selectedDate);
+        calendar.init(
+                calendar.getYear(),
+                calendar.getMonth(),
+                calendar.getDayOfMonth(),
+                (view, year, month, dayOfMonth) -> {
+                    String date = String.valueOf(dayOfMonth) + '/' + String.valueOf(month+1) + '/' + String.valueOf(year);
+                    selectedDate.setText("Selected Date: "+date);
+                });
 
 
         for(int i = 0; i < rooms.length; i++){
             int index = i;
             rooms[i].setOnClickListener(x -> onRoomButtonClicked(selectedRoom, rooms[index]));
         }
+
     }
     private void onRoomButtonClicked(TextView selectedRoom, Button roomButton){
         selectedRoom.setText("Selected Room: "+roomButton.getText());
     }
+
+
+
+    private void onopenCalendarButtonClick(Button openCalendar, DatePicker calendar){
+        int vis = calendar.getVisibility();
+        if(vis == VISIBLE){
+            calendar.setVisibility(INVISIBLE);
+        }
+        else{
+            calendar.setVisibility(VISIBLE);
+        }
+    }
+
 }

@@ -36,6 +36,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,7 +148,32 @@
             </LinearLayout>
         </ScrollView>
 
+        <Button
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/openCalendar"
+            android:text="Choose a Day"
+            android:backgroundTint="@color/blue"
+            android:textSize="20sp"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Day: 1st Jan 1999"
+            android:id="@+id/selectedDate"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="19sp"
+            />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:visibility="invisible"
+            />
 
 
     </LinearLayout>
