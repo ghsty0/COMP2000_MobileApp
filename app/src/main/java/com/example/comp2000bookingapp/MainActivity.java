@@ -1,6 +1,8 @@
 package com.example.comp2000bookingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +22,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button employeeLoginButton = (Button) findViewById(R.id.employeeLoginButton);
+        employeeLoginButton.setOnClickListener(x -> onEmployeeLoginButtonClick());
+    }
+    private void onEmployeeLoginButtonClick(){
+        Intent intent = new Intent(this, EmployeeLogin.class);
+        startActivity(intent);
     }
 }
