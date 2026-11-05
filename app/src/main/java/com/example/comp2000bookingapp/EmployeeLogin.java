@@ -1,6 +1,8 @@
 package com.example.comp2000bookingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +22,11 @@ public class EmployeeLogin extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button loginSubmit = (Button) findViewById(R.id.loginSubmit);
+        loginSubmit.setOnClickListener(x -> onLoginSubmitButtonClick());
+    }
+    private void onLoginSubmitButtonClick(){
+        Intent intent = new Intent(this, employeeHomepage.class);
+        startActivity(intent);
     }
 }
