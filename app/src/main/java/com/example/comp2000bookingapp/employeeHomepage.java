@@ -24,13 +24,26 @@ public class employeeHomepage extends AppCompatActivity {
         });
         Button requestRoomButton = (Button) findViewById(R.id.requestRoomButton);
         requestRoomButton.setOnClickListener(x -> onrequestRoomButtonButtonClick());
-
         Button calendarButtonButton = (Button) findViewById(R.id.calendarButton);
         calendarButtonButton.setOnClickListener(x -> oncalendarButtonButtonClick());
-
         Button bookingsButtonButton = (Button) findViewById(R.id.bookingsButton);
         bookingsButtonButton.setOnClickListener(x -> onbookingsButtonButtonClick());
+
+        Button hotbarCalendar = (Button) findViewById(R.id.hotbarCalendar);
+        hotbarCalendar.setOnClickListener(x -> oncalendarButtonButtonClick());
+        Button hotbarRequests = (Button) findViewById(R.id.hotbarRequests);
+        hotbarRequests.setOnClickListener(x -> onrequestRoomButtonButtonClick());
+        Button hotbarBookings = (Button) findViewById(R.id.hotbarBookings);
+        hotbarBookings.setOnClickListener(x -> onbookingsButtonButtonClick());
+        Button hotbarSettings = (Button) findViewById(R.id.hotbarSettings);
+        hotbarSettings.setOnClickListener(x -> onSettingsButtonButtonClick());
     }
+
+
+
+
+
+
     private void onrequestRoomButtonButtonClick(){
         Intent intent = new Intent(this, RoomRequest.class);
         startActivity(intent);
@@ -42,5 +55,9 @@ public class employeeHomepage extends AppCompatActivity {
     private void onbookingsButtonButtonClick(){
         Intent intent3 = new Intent(this, MyBookings.class);
         startActivity(intent3);
+    }
+    private void onSettingsButtonButtonClick(){
+        Intent intent = new Intent(this, employeeSettings.class);
+        startActivity(intent);
     }
 }
