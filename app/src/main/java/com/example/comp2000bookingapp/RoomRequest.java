@@ -3,6 +3,7 @@ package com.example.comp2000bookingapp;
 import static android.view.View.VISIBLE;
 import static android.view.View.INVISIBLE;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.Button;
@@ -80,6 +81,16 @@ public class RoomRequest extends AppCompatActivity {
                     selectedDate.setText("Selected Date: "+date);
                 });
 
+        Button viewAvailability = (Button) findViewById(R.id.viewAvailability);
+        viewAvailability.setOnClickListener(x -> onviewAvailabilityButtonClick());
+        Button hotbarCalendar = (Button) findViewById(R.id.hotbarCalendar);
+        hotbarCalendar.setOnClickListener(x -> onviewAvailabilityButtonClick());
+        Button hotbarHome = (Button) findViewById(R.id.hotbarHome);
+        hotbarHome.setOnClickListener(x -> onhotbarHomeButtonClick());
+        Button hotbarBookings = (Button) findViewById(R.id.hotbarBookings);
+        hotbarBookings.setOnClickListener(x -> onhotbarBookingsButtonClick());
+        Button hotbarSettings = (Button) findViewById(R.id.hotbarSettings);
+        hotbarSettings.setOnClickListener(x -> onhotbarSettingsButtonClick());
 
         for(int i = 0; i < rooms.length; i++){
             int index = i;
@@ -96,6 +107,22 @@ public class RoomRequest extends AppCompatActivity {
             endTimes[k].setOnClickListener(x -> onEndTimeClicked(endTime, endTimes[index]));
         }
 
+    }
+    private void onviewAvailabilityButtonClick(){
+        Intent intent = new Intent(this, EmployeeCalendar.class);
+        startActivity(intent);
+    }
+    private void onhotbarHomeButtonClick(){
+        Intent intent = new Intent(this, employeeHomepage.class);
+        startActivity(intent);
+    }
+    private void onhotbarBookingsButtonClick(){
+        Intent intent = new Intent(this, MyBookings.class);
+        startActivity(intent);
+    }
+    private void onhotbarSettingsButtonClick(){
+        Intent intent = new Intent(this, employeeSettings.class);
+        startActivity(intent);
     }
     private void onRoomButtonClicked(TextView selectedRoom, Button roomButton){
         selectedRoom.setText("Selected Room: "+roomButton.getText());

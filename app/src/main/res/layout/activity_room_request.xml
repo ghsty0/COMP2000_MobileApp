@@ -60,6 +60,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Scroll for more options"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Selected Room: Meeting Room 1"
                 android:id="@+id/selectedRoom"
                 android:fontFamily="sans-serif-condensed-medium"
@@ -153,7 +160,7 @@
             </ScrollView>
 
             <LinearLayout
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 >
@@ -467,6 +474,7 @@
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/form"
+                android:id="@+id/hotbarRequests"
                 app:backgroundTint="@color/black"
                 />
         </LinearLayout>
@@ -493,6 +501,7 @@
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/calendar"
+                android:id="@+id/hotbarCalendar"
                 app:backgroundTint="@color/black"
 
                 />
@@ -520,6 +529,7 @@
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/home"
+                android:id="@+id/hotbarHome"
                 app:backgroundTint="@color/black"
                 />
         </LinearLayout>
@@ -546,6 +556,7 @@
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/book"
+                android:id="@+id/hotbarBookings"
                 app:backgroundTint="@color/black"
                 />
         </LinearLayout>
@@ -572,6 +583,7 @@
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/settings"
+                android:id="@+id/hotbarSettings"
                 app:backgroundTint="@color/black"
                 />
         </LinearLayout>
