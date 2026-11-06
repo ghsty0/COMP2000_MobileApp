@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/lightOrange"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -25,7 +26,8 @@
                 android:letterSpacing="0.05"
                 android:text="Request a Room"
                 android:textColor="@color/blue"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
@@ -65,8 +67,10 @@
                 />
 
             <ScrollView
-                android:layout_width="256dp"
-                android:layout_height="100dp"
+                android:layout_width="240dp"
+                android:layout_height="109dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:background="@color/lightBlue"
             >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -157,6 +161,8 @@
                 <ScrollView
                     android:layout_width="100dp"
                     android:layout_height="70dp"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:background="@color/lightBlue"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -167,6 +173,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:id="@+id/startTime"
                             android:text="Start: "
                         />
@@ -268,6 +275,8 @@
                 <ScrollView
                     android:layout_width="100dp"
                     android:layout_height="70dp"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:background="@color/lightBlue"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -278,6 +287,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:id="@+id/endTime"
                             android:text="End: "
                             />
@@ -413,14 +423,13 @@
                 />
 
             <DatePicker
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="325dp"
+                android:layout_height="240dp"
                 android:id="@+id/datePicker"
                 android:visibility="invisible"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:background="@color/white"
                 />
-
-
-
 
         </LinearLayout>
     <LinearLayout
@@ -436,6 +445,11 @@
             android:layout_height="81dp"
             android:background="@color/blue"
             >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/white"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

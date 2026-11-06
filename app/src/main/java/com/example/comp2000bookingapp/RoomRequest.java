@@ -41,8 +41,36 @@ public class RoomRequest extends AppCompatActivity {
                         findViewById(R.id.SR1),
                         findViewById(R.id.SR2)
                 };
+
+        Button[] startTimes = {
+                findViewById(R.id.time9),
+                findViewById(R.id.time10),
+                findViewById(R.id.time11),
+                findViewById(R.id.time12),
+                findViewById(R.id.time13),
+                findViewById(R.id.time14),
+                findViewById(R.id.time15),
+                findViewById(R.id.time16),
+                findViewById(R.id.time17)
+        };
+
+        Button[] endTimes = {
+                findViewById(R.id.eTime10),
+                findViewById(R.id.eTime11),
+                findViewById(R.id.eTime12),
+                findViewById(R.id.eTime13),
+                findViewById(R.id.eTime14),
+                findViewById(R.id.eTime15),
+                findViewById(R.id.eTime16),
+                findViewById(R.id.eTime17),
+                findViewById(R.id.eTime18)
+        };
+
+        TextView startTime = (TextView)findViewById(R.id.startTime);
+        TextView endTime = (TextView)findViewById(R.id.endTime);
         TextView selectedRoom = (TextView)findViewById(R.id.selectedRoom);
         TextView selectedDate = (TextView)findViewById(R.id.selectedDate);
+
         calendar.init(
                 calendar.getYear(),
                 calendar.getMonth(),
@@ -58,9 +86,25 @@ public class RoomRequest extends AppCompatActivity {
             rooms[i].setOnClickListener(x -> onRoomButtonClicked(selectedRoom, rooms[index]));
         }
 
+        for(int j = 0; j < startTimes.length; j++){
+            int index = j;
+            startTimes[j].setOnClickListener(x -> onStartTimeClicked(startTime, startTimes[index]));
+        }
+
+        for(int k = 0; k < endTimes.length; k++){
+            int index = k;
+            endTimes[k].setOnClickListener(x -> onEndTimeClicked(endTime, endTimes[index]));
+        }
+
     }
     private void onRoomButtonClicked(TextView selectedRoom, Button roomButton){
         selectedRoom.setText("Selected Room: "+roomButton.getText());
+    }
+    private void onStartTimeClicked(TextView startTime, Button startTimes){
+        startTime.setText("Start: "+startTimes.getText());
+    }
+    private void onEndTimeClicked(TextView endTime, Button endTimes){
+        endTime.setText("End: "+endTimes.getText());
     }
 
 
